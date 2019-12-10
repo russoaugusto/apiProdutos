@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Estoque Produtos Api</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<div class="container fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<table class="table stripped" id="tabelaprodutos">
+					<tr>
+						<th>ID</th>
+						<th>Nome</th>
+						<th>Marca</th>
+						<th>Quantidade</th>
+						<th>Validade</th>
+						<th>Preço</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 centered">
+				<button onClick="adicionarProduto()" class="btn btn-success">Adicionar Produto</button>
+			</div>
+		</div>
+		<div class="row formProduto" id="formProduto">
+			<div class="col-sm-12">
+				<h1>Adicionar um novo produto</h1>
+				<form id="adicionarProduto" action="javascript:enviarForm()">
+					<div class="form-group">
+						<label for="nome">Nome</label>
+						<input type="text" class="form-control" aria-describedby="nomeHelp" id="nome" placeholder="Informe o nome do produto">
+						<!--<small id="nomeHelp" class="form-text text-muted">Não vamos publicar o produto</small>-->
+					</div> 
+					<div class="form-group">
+						<label for="marca">Marca</label>
+						<input type="text" class="form-control" id="marca" placeholder="Informe a marca do produto">
+						<!--<small id="idadeHelp" class="form-text text-muted">Idade em anos</small>-->
+					</div>  
+					<div class="form-group">
+						<label for="quantidade">Quantidade</label>
+						<input type="number" class="form-control" id="quantidade" placeholder="Informe a quantidade em estoque">
+						<!--<small id="alturaHelp" class="form-text text-muted">Altura em CM</small>-->
+					</div>
+					<div class="form-group">
+						<label for="validade">Validade</label>
+						<input type="text" class="form-control" id="validade" placeholder="Informe a data de validade">
+						<small id="validadeHelp" class="form-text text-muted">Informe a data de validade</small>
+					</div>  
+					<div class="form-group">
+						<label for="validade">Preço</label>
+						<input type="number" class="form-control" id="preco" step="0.01" placeholder="Informe o preço">
+						<small id="precoHelp" class="form-text text-muted">ex: 29.90</small>
+					</div>				  
+					<input type="submit" class="btn btn-primary" value="Enviar">
+				</form>				
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/requisicoes.js"></script>
+</body>
+</html>
