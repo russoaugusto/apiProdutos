@@ -18,6 +18,8 @@
 						<th>Quantidade</th>
 						<th>Validade</th>
 						<th>Preço</th>
+						<th>Editar</th>
+						<th>Excluir</th>
 					</tr>
 				</table>
 			</div>
@@ -27,8 +29,8 @@
 				<button onClick="adicionarProduto()" class="btn btn-success">Adicionar Produto</button>
 			</div>
 		</div>
-		<div class="row formProduto" id="formProduto">
-			<div class="col-sm-12">
+		<div class="row">
+			<div class="col-sm-12 formProduto" id="formProduto">
 				<h1>Adicionar um novo produto</h1>
 				<form id="adicionarProduto" action="javascript:enviarForm()">
 					<div class="form-group">
@@ -49,7 +51,42 @@
 					<div class="form-group">
 						<label for="validade">Validade</label>
 						<input type="text" class="form-control" id="validade" placeholder="Informe a data de validade">
-						<small id="validadeHelp" class="form-text text-muted">Informe a data de validade</small>
+						<small id="validadeHelp" class="form-text text-muted">Formato aaaa/mm/dd ex: 2019/12/11</small>
+					</div>  
+					<div class="form-group">
+						<label for="validade">Preço</label>
+						<input type="number" class="form-control" id="preco" step="0.01" placeholder="Informe o preço">
+						<small id="precoHelp" class="form-text text-muted">ex: 29.90</small>
+					</div>				  
+					<input type="submit" class="btn btn-primary" value="Enviar">
+				</form>				
+			</div>
+			<div class="col-sm-12 editarDivProduto" id="editarDivProduto">
+				<h1>Editar produto</h1>
+				<form id="editarProduto" action="javascript:enviarFormEditar()">
+					<div class="form-group" style="display: none;">
+						<label for="id">id</label>
+						<input type="text" class="form-control" aria-describedby="idHelp" id="id" placeholder="Informe o id do produto">
+					</div> 
+					<div class="form-group">
+						<label for="nome">Nome</label>
+						<input type="text" class="form-control" aria-describedby="nomeHelp" id="nome" placeholder="Informe o nome do produto">
+						<small id="nomeHelp" class="form-text text-muted">Não vamos publicar o produto</small>
+					</div> 
+					<div class="form-group">
+						<label for="marca">Marca</label>
+						<input type="text" class="form-control" id="marca" placeholder="Informe a marca do produto">
+						<small id="idadeHelp" class="form-text text-muted">Idade em anos</small>
+					</div>  
+					<div class="form-group">
+						<label for="quantidade">Quantidade</label>
+						<input type="number" class="form-control" id="quantidade" placeholder="Informe a quantidade em estoque">
+						<small id="alturaHelp" class="form-text text-muted">Altura em CM</small>
+					</div>
+					<div class="form-group">
+						<label for="validade">Validade</label>
+						<input type="text" class="form-control" id="validade" placeholder="Informe a data de validade">
+						<small id="validadeHelp" class="form-text text-muted">Formato aaaa/mm/dd ex: 2019/12/11</small>
 					</div>  
 					<div class="form-group">
 						<label for="validade">Preço</label>
